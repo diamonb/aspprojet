@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<biblioteque.Models.AUTEUR>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Accueil";
 }
 
-<h2>Index</h2>
+<h2>AUTEUR</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Creer un nouveau", "Create")
 </p>
 <table class="table">
     <tr>
@@ -29,9 +29,9 @@
             @Html.DisplayFor(modelItem => item.prenom_auteur)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id_auteur }) |
+            @Html.ActionLink("Editer", "Edit", new { id=item.id_auteur }) |
             @Html.ActionLink("Details", "Details", new { id=item.id_auteur }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id_auteur })
+            @Html.ActionLink("Supprimer", "Delete", new { id=item.id_auteur })
         </td>
     </tr>
 }
