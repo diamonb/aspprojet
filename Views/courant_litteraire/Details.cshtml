@@ -1,0 +1,34 @@
+﻿@model biblioteque.Models.courant_litteraire
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>courant_litteraire</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.libelle_courant_lit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.libelle_courant_lit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description_courant_lit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description_courant_lit)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_courant_lit }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

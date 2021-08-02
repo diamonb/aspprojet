@@ -1,0 +1,50 @@
+﻿@model biblioteque.Models.EDITE
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EDITE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.isbn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isbn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date_edition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_edition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EDITEUR.nom_editeur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EDITEUR.nom_editeur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.livre.nom_livre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.livre.nom_livre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

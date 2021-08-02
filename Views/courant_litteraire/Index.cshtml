@@ -1,0 +1,39 @@
+﻿@model IEnumerable<biblioteque.Models.courant_litteraire>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.libelle_courant_lit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description_courant_lit)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.libelle_courant_lit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description_courant_lit)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_courant_lit }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_courant_lit }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_courant_lit })
+        </td>
+    </tr>
+}
+
+</table>
