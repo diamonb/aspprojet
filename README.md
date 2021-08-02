@@ -17,9 +17,9 @@ a-	Ouvrir Visual studio
 b-	Choisissez l’option cloner un projet dans la première fenêtre qui apparaîtra
 c-	Renseigner le nom que vous voulez donner au projet dans le champ indiqué pour le nom et valider
 ETAPE 2
-a-	Créer une base de données sql server du nom de bibliot.
+a-	Créer une base de données Sqlserver du nom de bibliot.
 b-	Récupérer le script de la base de données du nom de scriptbasededonnee dans le projet
-c-	Exécuter le script dans la base de données récupérée au point a-
+c-	Exécuter le script dans la base de données crée au point a-
 d-	Créer un utilisateur connexion_biblio avec le mot de passe esgis@2021
 ETAPE 3
 a-	Ouvrir le fichier Web.config du projet 
