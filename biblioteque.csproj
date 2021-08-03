@@ -193,6 +193,7 @@
       <DependentUpon>BibliotequeModel.edmx</DependentUpon>
       <LastGenOutput>BibliotequeModel.cs</LastGenOutput>
     </Content>
+    <Content Include="scriptbasededonnee.sql" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\BibliotequeModel.edmx">

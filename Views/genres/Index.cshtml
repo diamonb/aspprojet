@@ -9,31 +9,37 @@
 <p>
     @Html.ActionLink("Créer un nouveau", "Create")
 </p>
-<table class="table table-striped table-bordered">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.libelle_genre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.courant_litteraire.libelle_courant_lit)
-        </th>
-        <th></th>
-    </tr>
+<table  class="table table-striped table-bordered" style="width:100%" id="mydatatable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.libelle_genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.courant_litteraire.libelle_courant_lit)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.libelle_genre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.courant_litteraire.libelle_courant_lit)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id_genre }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id_genre }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id_genre })
+                </td>
+            </tr>
+        }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.libelle_genre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.courant_litteraire.libelle_courant_lit)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id_genre }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id_genre }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id_genre })
-        </td>
-    </tr>
-}
+    </tbody>
 
 </table>

@@ -9,25 +9,31 @@
 <p>
     @Html.ActionLink("Créer un nouveau", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.nom_editeur)
-        </th>
-        <th></th>
-    </tr>
+<table  class="table table-striped table-bordered" style="width:100%" id="mydatatable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nom_editeur)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nom_editeur)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id_editeur }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id_editeur }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id_editeur })
+                </td>
+            </tr>
+        }
+    </tbody>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.nom_editeur)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id_editeur }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id_editeur }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id_editeur })
-        </td>
-    </tr>
-}
 
 </table>
